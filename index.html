@@ -83,21 +83,41 @@
     <div>
         <h6>Q 1: How does Javascript work ?</h6>
         <p>
-            Ans: Javascript ব্রাউজারে চলে V8 ইঞ্জিন দিয়ে । এর ভিতরে JTI(Just in time) compiler use করে কোড লাইন বাই লাইন interpreter করে, মানে এটা interpreter language। এর কিছু অংশ Synchronous, আবার কিছু অংশ Asynchronous ভাবে চলে।
-            JavaScript নিজে single threaded।  এটা multi threaded না।
-            <h6>V8  engine internal mechanism :</h6>
+            Ans: 
+            Javascript ব্রাউজারে চলে V8 ইঞ্জিন দিয়ে । এর ভিতরে JTI(Just in time) compiler use করে কোড লাইন বাই লাইন interpreter করে, মানে এটা interpreter language। এর কিছু অংশ Synchronous, আবার কিছু অংশ Asynchronous ভাবে চলে।
+            JavaScript নিজে single threaded।  এটা multi threaded না।<br>
+            <b>V8  engine internal mechanism :</b>
             JS source code => Chrome V8 engine =>  Parsing =>  AST (Abstract Syntax Tree) Byte code => Machine code =>  Code runs on the CPU .
         </p>    
         
         <h6>Q 2: What does Javascript Event Loop do ?</h6>
         <p>
-            Ans: Event loop কে endless loop, main loop or main event loop,run loop বলা হয় । জাভাস্ক্রিপ্টের রানটাইম মডেল Event loop এর উপর ভিত্তি করে চলে। যেমন : code execute , collecting and processing events , executing queued sub-tasks ইত্যাদি কাজগুলো করে থাকে।
-            Event loop সব সময় Call Stack এবং  Callback Queue  কে চেক করতে থাকে । যদি Call Stack খালি থাকে তাহলে event queue থেকে নতুন ফাংশন যেটা প্রথমে আছে সেটা যোগ করে। যদি Call Stack খালি না থাকে তাহলে current function টাকেই call  করে। তারপর ব্রাউজার কনসোল এবং Call Stack খালি করে। তারপর সে ঘুমায় মানে এটি কাজের জন্য অপেক্ষা করতে থাকে 
-        
+            Ans: 
+            Event loop কে endless loop, main loop or main event loop,run loop বলা হয় । জাভাস্ক্রিপ্টের রানটাইম মডেল Event loop এর উপর ভিত্তি করে চলে। যেমন : code execute , collecting and processing events , executing queued sub-tasks ইত্যাদি কাজগুলো করে থাকে।<br>
+            Event loop সব সময় Call Stack এবং  Callback Queue  কে চেক করতে থাকে । যদি Call Stack খালি থাকে তাহলে event queue থেকে নতুন ফাংশন যেটা প্রথমে আছে সেটা যোগ করে। যদি Call Stack খালি না থাকে তাহলে current function টাকেই call  করে। তারপর ব্রাউজার কনসোল এবং Call Stack খালি করে। তারপর সে ঘুমায় মানে এটি কাজের জন্য অপেক্ষা করতে থাকে ।
         </p>
         
         <h6>Q 3: What are the differences between Local Storage & Session Storage ?</h6>
-        <p>Ans:</p>
+        <p>
+            Ans: 
+            SessionStorage and  LocalStorage  একই রকম কাজ করে থাকে।
+            SessionStorage and  LocalStorage এরা উভয়ই key/value pair এভাবে data  গুলো store করে রাখে ।<br>
+            i) LocalStorage  data স্থায়ী  ভাবে থাকে ।<br>
+            ii) LocalStorage  এর data উইন্ডো বা ট্যাব বন্ধ করে দিলেও থাকে   অর্থাৎ 
+                user browser বন্ধ করে দিলে LocalStorage clear হয়ে যায় না । <br>
+            iii) LocalStorage বিভিন্ন মান সংরক্ষণ এবং পুনরুদ্ধার করতে পারে । এজন্য browser
+                 এ data save  করার জন্য LocalStorage  কে popular choice মনে করা হয় ।<br>
+            iv) LocalStorage  স্টোরেজ ক্ষমতা 5MB/10MB ।<br>
+            v) Data server এ data ট্রান্সফার করা যায় না ।<br>
+            <br>
+            i) এবং SessionStorage  data অস্থায়ী  ভাবে থাকে ।<br>
+            ii) SessionStorage  এর data উইন্ডো বা ট্যাব বন্ধ না হওয়া পর্যন্ত থাকে অর্থাৎ
+                user browser বন্ধ করে দিলে SessionStorage clear হয়ে যায় ।<br>
+            iii) SessionStorage বিভিন্ন মান সংরক্ষণ এবং পুনরুদ্ধার করতে পারেনা।<br>
+                কারণ   উইন্ডো বা ট্যাব বন্ধ   হওয়ার সাথে সাথেই তথ্য মুছে যায় 
+            iv) sessionStorage  স্টোরেজ ক্ষমতা  5MB।<br>
+            v) Data server এ data ট্রান্সফার করা যায় না ।<br>   
+        </p>
 
     </div>
 </section>
