@@ -244,6 +244,11 @@ img {
 #reported{
   display: none;
 }
+.question-sec{
+  padding: 10px;
+  margin-left: 25px;
+  margin-top: 25px;
+}
 
 @media only screen and (max-width: 992px) {
   #posts {
