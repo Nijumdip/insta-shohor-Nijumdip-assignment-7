@@ -34,18 +34,18 @@ const switchTab = (id) => {
   if (id === "posts") {
     document.getElementById( "posts" ).style.display = "grid";
     document.getElementById( "liked" ).style.display = "none";
-    document.getElementById( "reported" ).style.display = "none";
+    document.getElementById("reported").style.display = "none";
+    document.getElementById( "question" ).style.display = "none";
   } else if (id === "liked") {
     document.getElementById( "liked" ).style.display = "block";
     document.getElementById( "posts" ).style.display = "none";
     document.getElementById( "reported" ).style.display = "none";
-
     displayLikedPosts();
   } else {
     document.getElementById( "reported" ).style.display = "block";
     document.getElementById( "posts" ).style.display = "none";
     document.getElementById( "liked" ).style.display = "none";
-
+    document.getElementById( "question" ).style.display = "none";
     displayReportedPosts();
   }
 };
